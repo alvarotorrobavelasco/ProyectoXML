@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE test [
+  <!ELEMENT test (question+)>
+  <!ELEMENT question (wording,choices)>
+  <!ELEMENT wording (#PCDATA)>
+  <!ELEMENT choices (choice+)>
+  <!ELEMENT choice (#PCDATA)>
+  
+  <!ATTLIST question id CDATA #REQUIRED>
+  <!ATTLIST choice correct (yes|no) "no">
+]>
+<test>
+  <question id="1">
+    <wording>¿Cuántas hermandades de penitencia hay en Huelva capital?</wording>
+    <choices>
+      <choice>20</choice>
+      <choice correct="yes">27</choice>
+      <choice>30</choice>
+      <choice>15</choice>
+    </choices>
+  </question>
+  
+  <question id="2">
+    <wording>¿Qué hermandad realiza su estación de penitencia el Domingo de Ramos por la tarde?</wording>
+    <choices>
+      <choice>La Victoria</choice>
+      <choice>Los Mutilados</choice>
+      <choice correct="yes">La Borriquita</choice>
+      <choice>Tres Caídas</choice>
+    </choices>
+  </question>
+
+  <question id="3">
+    <wording>¿Qué hermandad es conocida como "La Reina de Huelva"?</wording>
+    <choices>
+      <choice correct="yes">Hermandad de la Victoria</choice>
+      <choice>Hermandad de los Judíos</choice>
+      <choice>Hermandad del Nazareno</choice>
+      <choice>Hermandad de la Merced</choice>
+    </choices>
+  </question>
+
+  <question id="4">
+    <wording>¿En qué día hace su estación de penitencia la Hermandad de los Estudiantes?</wording>
+    <choices>
+      <choice correct="yes">Martes Santo</choice>
+      <choice>Miércoles Santo</choice>
+      <choice>Jueves Santo</choice>
+      <choice>Lunes Santo</choice>
+    </choices>
+  </question>
+
+  <question id="5">
+    <wording>¿Cuál es la hermandad más antigua de Huelva?</wording>
+    <choices>
+      <choice>Tres Caídas</choice>
+      <choice correct="yes">Vera Cruz</choice>
+      <choice>La Victoria</choice>
+      <choice>El Perdón</choice>
+    </choices>
+  </question>
+
+  <question id="6">
+    <wording>¿Qué hermandad realiza su estación de penitencia en la madrugada del Viernes Santo?</wording>
+    <choices>
+      <choice correct="yes">El Nazareno</choice>
+      <choice>La Merced</choice>
+      <choice>Los Judíos</choice>
+      <choice>La Victoria</choice>
+    </choices>
+  </question>
+
+  <question id="7">
+    <wording>¿En qué iglesia tiene su sede canónica la Hermandad de la Victoria?</wording>
+    <choices>
+      <choice>La Merced</choice>
+      <choice>San Pedro</choice>
+      <choice correct="yes">El polvorín</choice>
+      <choice>La Concepción</choice>
+    </choices>
+  </question>
+
+  <question id="8">
+    <wording>¿Qué color predomina en el hábito nazareno de la Hermandad de los Estudiantes?</wording>
+    <choices>
+      <choice>Morado</choice>
+      <choice correct="yes">Negro</choice>
+      <choice>Blanco</choice>
+      <choice>Rojo</choice>
+    </choices>
+  </question>
+
+  <question id="9">
+    <wording>¿Qué hermandad procesiona el Jueves Santo?</wording>
+    <choices>
+      <choice>El Santo Entierro</choice>
+      <choice>La Victoria</choice>
+      <choice correct="yes">Los Judíos</choice>
+      <choice>Bendición</choice>
+    </choices>
+  </question>
+
+  <question id="10">
+    <wording>¿Cuál es el recorrido oficial de la Semana Santa de Huelva?</wording>
+    <choices>
+      <choice correct="yes">Plazeta - Concepción - Plaza de las monjas - Ayuntamiento</choice>
+      <choice>Plaza de las Monjas - Calle Rico - Berdigón</choice>
+      <choice>Alameda Sundheim - Gran Vía - Plaza del Punto</choice>
+      <choice>Calle Puerto - Plaza de las Monjas - Concepción</choice>
+    </choices>
+  </question>
+
+  <question id="11">
+    <wording>¿Qué costaleros son conocidos como "Los Locos De Blanco"?</wording>
+    <choices>
+      <choice>costaleros del Nazareno</choice>
+      <choice>Costaleros de la Victoria</choice>
+      <choice correct="yes">Costaleros de La Virgen de los Dolores del Perdón</choice>
+      <choice>Costaleros de los Estudiantes</choice>
+    </choices>
+  </question>
+
+  <question id="12">
+    <wording>¿En qué año se fundó el Consejo de Hermandades y Cofradías de Huelva?</wording>
+    <choices>
+      <choice>1955</choice>
+      <choice correct="yes">1949</choice>
+      <choice>1960</choice>
+      <choice>1945</choice>
+    </choices>
+  </question>
+
+  <question id="13">
+    <wording>¿Qué hermandad procesiona el Miércoles Santo por la tarde?</wording>
+    <choices>
+      <choice>Hermandad del Nazareno</choice>
+      <choice>Hermandad de los Estudiantes</choice>
+      <choice>Hermandad de Tres Caídas</choice>
+      <choice correct="yes">Hermandad de la Victoria</choice>
+    </choices>
+  </question>
+
+  <question id="14">
+    <wording>¿Cuál es la advocación de la Virgen de la Hermandad del Cristo de la Fe?</wording>
+    <choices>
+      <choice>Virgen de la Esperanza</choice>
+      <choice>Virgen de los Dolores</choice>
+      <choice correct="yes">Virgen de la Caridad</choice>
+      <choice>Virgen de la Amargura</choice>
+    </choices>
+  </question>
+
+  <question id="15">
+    <wording>¿Qué día hace su estación de penitencia la Hermandad de las Tres Caídas?</wording>
+    <choices>
+      <choice>Martes Santo</choice>
+      <choice correct="yes">Lunes Santo</choice>
+      <choice>Miércoles Santo</choice>
+      <choice>Jueves Santo</choice>
+    </choices>
+  </question>
+
+  <question id="16">
+    <wording>¿Qué imagen es conocida como "El rey de Huelva"?</wording>
+    <choices>
+      <choice>Cristo de la Fe</choice>
+      <choice>Cristo de la Vera Cruz</choice>
+      <choice correct="yes">Nuestro Padre Jesús Nazareno</choice>
+      <choice>Cristo de la Victoria</choice>
+    </choices>
+  </question>
+
+  <question id="17">
+    <wording>¿Qué cante es típico durante la Semana Santa de Huelva?</wording>
+    <choices>
+      <choice>Martinete</choice>
+      <choice correct="yes">Saeta</choice>
+      <choice>Seguiriya</choice>
+      <choice>Soleá</choice>
+    </choices>
+  </question>
+
+  <question id="18">
+    <wording>¿Qué flor es típica en los palios de las Vírgenes onubenses?</wording>
+    <choices>
+      <choice>Rosas</choice>
+      <choice>Azahar</choice>
+      <choice>Lirios</choice>
+      <choice correct="yes">Claveles</choice>
+    </choices>
+  </question>
+
+  <question id="19">
+    <wording>¿Qué hermandad tiene su sede en la Parroquia de la Purísima Concepción?</wording>
+    <choices>
+      <choice>La Victoria</choice>
+      <choice>El Perdón</choice>
+      <choice correct="yes">Oración en el huerto</choice>
+      <choice>Los Estudiantes</choice>
+    </choices>
+  </question>
+
+  <question id="20">
+    <wording>¿En qué barrio se encuentra la Hermandad de la Victoria?</wording>
+    <choices>
+      <choice>La Merced</choice>
+      <choice>San Sebastián</choice>
+      <choice correct="yes">El Polvorín</choice>
+      <choice>El Centro</choice>
+    </choices>
+  </question>
+</test>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE test [
+  <!ELEMENT test (question+)>
+  <!ELEMENT question (wording,choices)>
+  <!ELEMENT wording (#PCDATA)>
+  <!ELEMENT choices (choice+)>
+  <!ELEMENT choice (#PCDATA)>
+  
+  <!ATTLIST question id CDATA #REQUIRED>
+  <!ATTLIST choice correct (yes|no) "no">
+]>
+<test>
+  <question id="1">
+    <wording>How many penitential brotherhoods are there in Huelva city?</wording>
+    <choices>
+      <choice>20</choice>
+      <choice correct="yes">27</choice>
+      <choice>30</choice>
+      <choice>15</choice>
+    </choices>
+  </question>
+  
+  <question id="2">
+    <wording>Which brotherhood makes its penitential station on Palm Sunday afternoon?</wording>
+    <choices>
+      <choice>La Victoria</choice>
+      <choice>Los Mutilados</choice>
+      <choice correct="yes">La Borriquita</choice>
+      <choice>Tres Caídas</choice>
+    </choices>
+  </question>
+
+  <question id="3">
+    <wording>Which brotherhood is known as "The Queen of Huelva"?</wording>
+    <choices>
+      <choice correct="yes">Brotherhood of Victoria</choice>
+      <choice>Brotherhood of Los Judíos</choice>
+      <choice>Brotherhood of Nazareno</choice>
+      <choice>Brotherhood of La Merced</choice>
+    </choices>
+  </question>
+
+  <question id="4">
+    <wording>On which day does the Students' Brotherhood make its penitential station?</wording>
+    <choices>
+      <choice correct="yes">Holy Tuesday</choice>
+      <choice>Holy Wednesday</choice>
+      <choice>Holy Thursday</choice>
+      <choice>Holy Monday</choice>
+    </choices>
+  </question>
+
+  <question id="5">
+    <wording>Which is the oldest brotherhood in Huelva?</wording>
+    <choices>
+      <choice>Tres Caídas</choice>
+      <choice correct="yes">Vera Cruz</choice>
+      <choice>La Victoria</choice>
+      <choice>El Perdón</choice>
+    </choices>
+  </question>
+
+  <question id="6">
+    <wording>Which brotherhood makes its penitential station in the early hours of Good Friday?</wording>
+    <choices>
+      <choice correct="yes">El Nazareno</choice>
+      <choice>La Merced</choice>
+      <choice>Los Judíos</choice>
+      <choice>La Victoria</choice>
+    </choices>
+  </question>
+
+  <question id="7">
+    <wording>In which church does the Brotherhood of Victoria have its canonical headquarters?</wording>
+    <choices>
+      <choice>La Merced</choice>
+      <choice>San Pedro</choice>
+      <choice correct="yes">El Polvorín</choice>
+      <choice>La Concepción</choice>
+    </choices>
+  </question>
+
+  <question id="8">
+    <wording>What color predominates in the Nazarene habit of the Students' Brotherhood?</wording>
+    <choices>
+      <choice>Purple</choice>
+      <choice correct="yes">Black</choice>
+      <choice>White</choice>
+      <choice>Red</choice>
+    </choices>
+  </question>
+
+  <question id="9">
+    <wording>Which brotherhood processes on Holy Thursday?</wording>
+    <choices>
+      <choice>El Santo Entierro</choice>
+      <choice>La Victoria</choice>
+      <choice correct="yes">Los Judíos</choice>
+      <choice>Bendición</choice>
+    </choices>
+  </question>
+
+  <question id="10">
+    <wording>What is the official route of Holy Week in Huelva?</wording>
+    <choices>
+      <choice correct="yes">Plazeta - Concepción - Plaza de las monjas - City Hall</choice>
+      <choice>Plaza de las Monjas - Rico Street - Berdigón</choice>
+      <choice>Alameda Sundheim - Gran Vía - Plaza del Punto</choice>
+      <choice>Puerto Street - Plaza de las Monjas - Concepción</choice>
+    </choices>
+  </question>
+
+  <question id="11">
+    <wording>Which bearers are known as "The White Madmen"?</wording>
+    <choices>
+      <choice>Nazareno's bearers</choice>
+      <choice>Victoria's bearers</choice>
+      <choice correct="yes">Virgin of Sorrows of El Perdón's bearers</choice>
+      <choice>Students' bearers</choice>
+    </choices>
+  </question>
+
+  <question id="12">
+    <wording>In which year was the Council of Brotherhoods and Confraternities of Huelva founded?</wording>
+    <choices>
+      <choice>1955</choice>
+      <choice correct="yes">1949</choice>
+      <choice>1960</choice>
+      <choice>1945</choice>
+    </choices>
+  </question>
+
+  <question id="13">
+    <wording>Which brotherhood processes on Holy Wednesday afternoon?</wording>
+    <choices>
+      <choice>Brotherhood of Nazareno</choice>
+      <choice>Brotherhood of Students</choice>
+      <choice>Brotherhood of Tres Caídas</choice>
+      <choice correct="yes">Brotherhood of Victoria</choice>
+    </choices>
+  </question>
+
+  <question id="14">
+    <wording>What is the advocation of the Virgin of the Brotherhood of Christ of Faith?</wording>
+    <choices>
+      <choice>Virgin of Hope</choice>
+      <choice>Virgin of Sorrows</choice>
+      <choice correct="yes">Virgin of Charity</choice>
+      <choice>Virgin of Bitterness</choice>
+    </choices>
+  </question>
+
+  <question id="15">
+    <wording>On which day does the Brotherhood of Tres Caídas make its penitential station?</wording>
+    <choices>
+      <choice>Holy Tuesday</choice>
+      <choice correct="yes">Holy Monday</choice>
+      <choice>Holy Wednesday</choice>
+      <choice>Holy Thursday</choice>
+    </choices>
+  </question>
+
+  <question id="16">
+    <wording>Which image is known as "The King of Huelva"?</wording>
+    <choices>
+      <choice>Christ of Faith</choice>
+      <choice>Christ of Vera Cruz</choice>
+      <choice correct="yes">Our Father Jesus Nazarene</choice>
+      <choice>Christ of Victory</choice>
+    </choices>
+  </question>
+
+  <question id="17">
+    <wording>What is the typical singing during Holy Week in Huelva?</wording>
+    <choices>
+      <choice>Martinete</choice>
+      <choice correct="yes">Saeta</choice>
+      <choice>Seguiriya</choice>
+      <choice>Soleá</choice>
+    </choices>
+  </question>
+
+  <question id="18">
+    <wording>What flower is typical in the canopies of the Virgins of Huelva?</wording>
+    <choices>
+      <choice>Roses</choice>
+      <choice>Orange Blossom</choice>
+      <choice>Lilies</choice>
+      <choice correct="yes">Carnations</choice>
+    </choices>
+  </question>
+
+  <question id="19">
+    <wording>Which brotherhood has its headquarters in the Parish of the Immaculate Conception?</wording>
+    <choices>
+      <choice>La Victoria</choice>
+      <choice>El Perdón</choice>
+      <choice correct="yes">Prayer in the Garden</choice>
+      <choice>Los Estudiantes</choice>
+    </choices>
+  </question>
+
+  <question id="20">
+    <wording>In which neighborhood is the Brotherhood of Victoria located?</wording>
+    <choices>
+      <choice>La Merced</choice>
+      <choice>San Sebastián</choice>
+      <choice correct="yes">El Polvorín</choice>
+      <choice>El Centro</choice>
+    </choices>
+  </question>
+</test>

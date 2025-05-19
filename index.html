@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Concurso de Preguntas XML</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="language-selector">
+            <button onclick="cambiarIdioma('es')">Español</button>
+            <button onclick="cambiarIdioma('en')">English</button>
+        </div>
+
+        <div class="timer">
+            Tiempo: <span id="tiempo">00:00</span>
+        </div>
+
+        <div class="quiz-container">
+            <h2 id="pregunta"></h2>
+            <div id="opciones" class="options"></div>
+            <div class="navigation">
+                <button onclick="siguientePregunta()">Siguiente</button>
+                <button onclick="reiniciarJuego()">Reiniciar</button>
+            </div>
+        </div>
+
+        <div class="score">
+            Puntuación: <span id="puntuacion">0</span>
+        </div>
+    </div>
+
+    <script>
+        let preguntas = [];
+        let preguntaActual = 0;
+        let puntuacion = 0;
+        let tiempoInicio;
+        let idiomaActual = 'es';
+
+        function iniciarTemporizador() {
+            tiempoInicio = new Date();
+            actualizarTiempo();
+        }
+
+        function actualizarTiempo() {
+            const ahora = new Date();
+            const diferencia = new Date(ahora - tiempoInicio);
+            const minutos = diferencia.getMinutes().toString().padStart(2, '0');
+            const segundos = diferencia.getSeconds().toString().padStart(2, '0');
+            document.getElementById('tiempo').textContent = `${minutos}:${segundos}`;
+            setTimeout(actualizarTiempo, 1000);
+        }
+
+        function cargarPreguntas() {
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    preguntas = this.responseXML.getElementsByTagName("question");
+                    mostrarPregunta();
+                    iniciarTemporizador();
+                }
+            };
+            xhr.open("GET", `preguntas_${idiomaActual}.xml`, true);
+            xhr.send();
+        }
+
+        function mostrarPregunta() {
+            const pregunta = preguntas[preguntaActual];
+            document.getElementById('pregunta').textContent = 
+                pregunta.getElementsByTagName('wording')[0].textContent;
+            
+            const opciones = pregunta.getElementsByTagName('choice');
+            let opcionesHTML = '';
+            
+            for(let i = 0; i < opciones.length; i++) {
+                opcionesHTML += `
+                    <div class="option" onclick="seleccionarRespuesta(this, '${opciones[i].getAttribute('correct')}')">
+                        ${opciones[i].textContent}
+                    </div>`;
+            }
+            document.getElementById('opciones').innerHTML = opcionesHTML;
+        }
+
+        function seleccionarRespuesta(elemento, esCorrecta) {
+            if(esCorrecta === 'yes') {
+                elemento.classList.add('correcta');
+                puntuacion++;
+                document.getElementById('puntuacion').textContent = puntuacion;
+            } else {
+                elemento.classList.add('incorrecta');
+            }
+            
+            // Deshabilitar todas las opciones después de la selección
+            const opciones = document.getElementsByClassName('option');
+            for(let opcion of opciones) {
+                opcion.style.pointerEvents = 'none';
+            }
+        }
+
+        function siguientePregunta() {
+            preguntaActual++;
+            if(preguntaActual < preguntas.length) {
+                mostrarPregunta();
+            } else {
+                mostrarResultadoFinal();
+            }
+        }
+
+        function cambiarIdioma(idioma) {
+            idiomaActual = idioma;
+            preguntaActual = 0;
+            puntuacion = 0;
+            document.getElementById('puntuacion').textContent = '0';
+            cargarPreguntas();
+        }
+
+        function reiniciarJuego() {
+            const container = document.querySelector('.quiz-container');
+            container.innerHTML = `
+                <h2 id="pregunta"></h2>
+                <div id="opciones" class="options"></div>
+                <div class="navigation">
+                    <button onclick="siguientePregunta()">Siguiente</button>
+                    <button onclick="reiniciarJuego()">Reiniciar</button>
+                </div>
+            `;
+            
+            preguntaActual = 0;
+            puntuacion = 0;
+            document.getElementById('puntuacion').textContent = '0';
+            tiempoInicio = new Date();
+            cargarPreguntas();
+        }
+
+        function mostrarResultadoFinal() {
+            const container = document.querySelector('.quiz-container');
+            container.innerHTML = `
+                <h2>¡Prueba completada!</h2>
+                <p>Puntuación final: ${puntuacion} de ${preguntas.length}</p>
+                <div class="navigation">
+                    <button onclick="reiniciarJuego()">Jugar de nuevo</button>
+                </div>
+            `;
+        }
+
+        // Iniciar el quiz
+        cargarPreguntas();
+    </script>
+</body>
+</html>
